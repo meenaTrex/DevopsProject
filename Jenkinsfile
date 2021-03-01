@@ -1,9 +1,9 @@
 
 pipeline{
 	agent any
-	environment{
+	// environment{
 
-	}
+	// }
 	options{
 		disableConcurrentBuilds()
 	}
@@ -21,5 +21,14 @@ pipeline{
 				bat 'dotnet restore'
 			}
 		}
+
+		// stage('Start Sonar Analysis'){
+		// 	steps{
+		// 		echo 'start sonar'
+		// 		withSonarQubeEnv('Test_Sonar'){
+		// 			bat 'dotnet ""'
+		// 		}
+		// 	}
+		// }
 	}
 }
