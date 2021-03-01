@@ -2,7 +2,7 @@
 pipeline{
 	agent any
 	environment{
-		sonarScanner = tool name : 'sonar_scanner', type = 'hudson.plugins.sonar.MsBuildSQRunnerInstallation'
+		scannerHome = tool name : 'sonar_scanner', type : 'hudson.plugins.sonar.MsBuildSQRunnerInstallation'
 	}
 	options{
 		disableConcurrentBuilds()
